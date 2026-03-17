@@ -2,8 +2,8 @@
 
 ## Desenvolvido em TypeScript e Node.JS (versão 24)
 
-projeto utilizado com base de ensino e treinamento, dos cursos de **Informática**,  
-Principamente de nível técnico - **IFSP**
+Projeto utilizado como base de ensino e treinamento, dos cursos de **Informática**,  
+principalmente de nível técnico - **IFSP**
 
 ### Instalação
 
@@ -13,4 +13,4 @@ Principamente de nível técnico - **IFSP**
 
 `npm run dev`
 
-Autor: **Willier Gonçalves**
+Autor: **Denny Paulista Azevedo Filho**
