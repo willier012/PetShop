@@ -8,7 +8,6 @@ type Pet = {
   sex: PetSex
 }
 
-
 const data: Pet[] = [
     {
         type: 'dog',
@@ -131,12 +130,10 @@ const data: Pet[] = [
     },
 ];
 
-
 export const Pet = {
   getAll: (): Pet[] => {
     return data;
-  }
-
+  },
 
 getFromType: (type: PetType): Pet[] => {
   // primeira forma
@@ -154,17 +151,22 @@ getFromType: (type: PetType): Pet[] => {
   // terceira forma (mais enxuta)
   return data.filter(item => item.type === type);
 },
-    getFromName: (name: string): Pet[] => {
-     /*return data.filter(item => {
-        if(item.name.indexOf(name) > -1) {
-            return true;
-    } else {
-        return false;
+
+getFromName: (name: string): Pet[] => {
+    //primeira forma
+    /*
+    return data.filter(item => {
+        //if (item.name.indexOf(name) > -1) {
+        //    return true;
+        //} else {
+        //    return false;
+        //}
+        // segunda forma
+        return (item.name.indexOf(name) > -1);
+    })
+    */
+    return data.filter(item =>
+        item.name.toLocaleLowerCase().indexOf(name.toLocaleLowerCase()) > -1
+    );
     }
-       return (item.name.indexOf(name) > -1);
-     })
-       */
-      return data.filter(item => 
-        item.name.toLocaleLowerCase().indexOf(name.toLocaleLowerCase()))
-}
 }
